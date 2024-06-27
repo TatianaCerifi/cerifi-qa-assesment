@@ -17,7 +17,6 @@ module.exports = defineConfig({
       return require('./cypress/plugins/index.js')(on, config)
     },
     specPattern: 'cypress/e2e/**/*.feature',
-    defaultCommandTimeout: 10000,
-    supportFile:false
+    defaultCommandTimeout: 10000
   },
 });

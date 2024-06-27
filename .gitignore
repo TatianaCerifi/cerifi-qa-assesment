@@ -2,7 +2,6 @@
 
 # Node.js dependencies
 node_modules/
-.vscode
 
 # Cypress specific
 cypress/screenshots/
@@ -20,6 +19,7 @@ yarn-error.log*
 .webpack/
 
 ### VisualStudioCode ###
+.vscode/
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
