@@ -1,0 +1,23 @@
+{
+  "name": "cerifi-qa-assesment",
+  "version": "1.0.0",
+  "description": "QA_assesment",
+  "main": "index.js",
+  "scripts": {
+    "open": "npx cypress open",
+    "test": "cypress run --browser chrome"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:caestrada1103/cerifi-qa-assesment.git"
+  },
+  "author": "Carlos Estrada",
+  "license": "ISC",
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/e2e/step_definitions/"
+  },
+  "devDependencies": {
+    "cypress": "^13.12.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  }
+}
