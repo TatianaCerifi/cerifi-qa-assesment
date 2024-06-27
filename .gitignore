@@ -2,6 +2,7 @@
 
 # Node.js dependencies
 node_modules/
+.vscode
 
 # Cypress specific
 cypress/screenshots/
