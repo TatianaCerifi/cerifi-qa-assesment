@@ -18,7 +18,6 @@ class cartPage{
             .then(value =>{
                 Cypress.env('itemPrice', value);
             });
-        
     }
     validateCartBadget(amount){
         cy.scrollTo("top");

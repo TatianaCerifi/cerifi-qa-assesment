@@ -1,10 +1,6 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  'cypress-cucumber-preprocessor': {
-    nonGlobalStepDefinitions: false,
-    step_definitions: './cypress/e2e/step_definitions/**',
-  },
   numTestsKeptInMemory: 0,
   defaultCommandTimeout: 42000,
   pageLoadTimeout: 300000,
