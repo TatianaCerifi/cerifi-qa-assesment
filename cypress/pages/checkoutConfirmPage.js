@@ -5,10 +5,14 @@ class checkoutConfirmationPage{
         finishButton : () => cy.get('[data-test="subtotal-label"]'),
     }
     validateProductPrice(){
-        cy.get('@Price').then((value) => {
-            this.elements.productPrice().should('equal',value);
-            this.elements.subtotalLabel().should('equal',value);
-        })
+        this.elements.productPrice().should('be.visible').should('exist').invoke('text')
+            .then(tempvalue =>{
+                expect(tempvalue).to.equal(Cypress.env('itemPrice'))
+            });
+        this.elements.subtotalLabel().should('be.visible').should('exist').invoke('text')
+            .then(tempvalue =>{
+                expect(tempvalue.split(' ')[2]).to.equal(Cypress.env('itemPrice'))
+            });
     }
     
     typeLastName(lastName){

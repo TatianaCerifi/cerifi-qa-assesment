@@ -14,7 +14,11 @@ class cartPage{
     }
     validateCartTitle(title){
         this.elements.cartTitle().should('be.visible').contains(title);
-        let Price = this.elements.productPrice().invoke('text');
+        this.elements.productPrice().should('be.visible').should('exist').invoke('text')
+            .then(value =>{
+                Cypress.env('itemPrice', value);
+            });
+        
     }
     validateCartBadget(amount){
         this.elements.cartBadget().should('be.visible').invoke('text').should('equal',amount);

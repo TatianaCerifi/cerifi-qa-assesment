@@ -11,6 +11,9 @@ module.exports = defineConfig({
   responseTimeout: 60000,
   requestTimeout: 405700,
   chromeWebSecurity: false,
+  env:{
+    itemPrice:''
+  },
   e2e: {
     baseUrl: 'https://www.saucedemo.com',
     setupNodeEvents(on, config) {
