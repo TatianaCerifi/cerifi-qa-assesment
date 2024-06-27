@@ -16,3 +16,5 @@ Feature: Products details
         When I should see the cart with '1' badget
         And I should fill all personal of 'standard_user' for checkout
         And I Check the cost of the product
+        Then I end the process with a success message
+        And I should see the cart with '0' badget

@@ -21,7 +21,12 @@ class cartPage{
         
     }
     validateCartBadget(amount){
-        this.elements.cartBadget().should('be.visible').invoke('text').should('equal',amount);
+        cy.scrollTo("top");
+        if(amount==0){
+            this.elements.cartBadget().should('not.exist');
+        }else{
+            this.elements.cartBadget().should('be.visible').invoke('text').should('equal',amount);
+        }
     }
     removeProductFromCart(){
         this.elements.removeProductButton().should('be.visible').should('exist').click();
