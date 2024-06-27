@@ -30,6 +30,6 @@ Feature: Products details
         Then I should see the price of the products
 
     Scenario: user can add an item to the shopping cart
-        When I add a products to the cart
+        When I add a product to the cart
         Then I should see the title of 'Your Cart'
         And I should see the cart with '1' badget

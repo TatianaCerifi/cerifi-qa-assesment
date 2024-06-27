@@ -25,7 +25,7 @@ When('I order the products by name descendant', () => {
 When('I order the products by price descendant', () => {
   HomePage.OrderByPriceDescendant();
 });
-When('I add a products to the cart', () => {
+When('I add a product to the cart', () => {
   HomePage.addProductToCartList();
 });
 
