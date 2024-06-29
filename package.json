@@ -1,0 +1,33 @@
+{
+  "name": "test-cypress-project",
+  "version": "1.0.0",
+  "description": "Practice project with Cypress.",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:runner": "cypress open --e2e --browser chrome",
+    "cypress:run-all": "cypress run --reporter mochawesome && npm run merge-reports",
+    "cypress:regression-tag": "cypress run --env tags=@regression --reporter mochawesome && npm run merge-reports",
+    "cypress:smoke-tag": "cypress run --env tags=@smoke --reporter mochawesome && npm run merge-reports",
+    "merge-reports": "mochawesome-merge cypress/report/mochawesome-report/*.json > cypress/report/output.json && marge cypress/report/output.json --reportDir ./ --inline"
+  },
+  "keywords": [
+    "Cypress",
+    "Cucumber",
+    "JavaScript"
+  ],
+  "author": "Nicolas Ortiz",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.1.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "@faker-js/faker": "^8.4.1",
+    "@shelex/cypress-allure-plugin": "^2.34.0",
+    "cypress": "^13.12.0",
+    "esbuild": "^0.16.4",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0",
+    "multiple-cucumber-html-reporter": "^3.0.1"
+  }
+}
