@@ -1,5 +1,60 @@
 # QA Automation Assessment
 
+This is the code created followind the challenge sent by the team and following the SauceDemo page components
+
+## Installing
+ - Download the repository
+ - Run the following command in the root of the project 'npm install'
+ - Install Cypress
+
+## Running Tests:
+ - Open a terminal and go to the root folder
+ - run this command 'npx cypress run'
+
+## Structure of the framework
+```
+cypress/
+    ├── e2e/
+    ├── fixtures/
+    ├── elements/
+    ├── pages/
+    │   ├── loginPage.js
+    │   └── homePage.js
+    ├── screenshots/
+    └── support/
+        ├── commands.js
+        └── e2e.js
+    └── video/
+```
+
+### e2e folder
+This folder contains all the testcases created for this challenge
+
+### fixtures folder
+This folder contains all the user provided to be tested
+
+### elements folder
+This folder contains the locator of the elements we use in our pages
+
+### pages folder
+this folder contains the interactions with the elements that we can use in our testcases 
+
+### Screenshoots and videos folder
+Those folders contains the images and videos of the run
+
+### support folder
+This folder contains the cypress support commands and the support commands I created for the framework
+
+## How to contribute
+- I created a Page Object Model framework that is scalable and easy to mantain, you can create more elements, pages and testcases following the model
+- this project can be also be accomadated to the future needs because of it easy understand and easy maintainability according to the model I pick that is widely 
+recommended and used in the automation projects
+
+
+
+# ------- CHALLENGE -------
+# QA Automation Assessment
+
 Welcome to the QA Automation assessment. You will be testing a fictional e-commerce application, SauceDemo, to ensure its functionality and user experience are robust.
 
 ## Challenge
