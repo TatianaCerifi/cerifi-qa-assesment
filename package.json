@@ -1,0 +1,34 @@
+{
+  "name": "cerifi-qa-assesment",
+  "version": "1.0.0",
+  "description": "E2E automation testing for saucedemo.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "cypress:open": "cypress open",
+    "cypress:run-all": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TatianaCerifi/cerifi-qa-assesment.git"
+  },
+  "keywords": [
+    "e2e",
+    "automation",
+    "cypress",
+    "demo"
+  ],
+  "author": "Alexis Erazo",
+  "license": "ISC",
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/e2e/definitions"
+  },
+  "bugs": {
+    "url": "https://github.com/TatianaCerifi/cerifi-qa-assesment/issues"
+  },
+  "homepage": "https://github.com/TatianaCerifi/cerifi-qa-assesment#readme",
+  "dependencies": {
+    "cypress": "^13.13.2",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  }
+}
