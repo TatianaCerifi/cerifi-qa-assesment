@@ -1,0 +1,24 @@
+{
+  "name": "cerifi-qa-assesment",
+  "version": "1.0.0",
+  "description": "technical test",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open --env grepTags=-@bug",
+    "cypress:run": "cypress run --browser chrome --headed --env grepTags=-@bug",
+    "cypress:run:smoke": "cypress run --browser chrome --headed --env grepTags=@smoke",
+    "reports:delete": "rm -rf cypress/reports/* || true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanfakoly/cerifi-qa-assesment.git"
+  },
+  "author": "juanfakoly",
+  "license": "ISC",
+  "devDependencies": {
+    "@cypress/grep": "^4.1.0",
+    "cypress": "^13.13.3",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "typescript": "^5.5.4"
+  }
+}
